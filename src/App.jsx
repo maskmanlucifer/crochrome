@@ -314,17 +314,6 @@ function App() {
     }, 'image/png')
   }
 
-  const downloadAllImages = async () => {
-    if (!targetSize || uploadedImages.length === 0) return
-
-    for (let i = 0; i < uploadedImages.length; i++) {
-      await downloadSingleImage(i)
-      // Small delay between downloads
-      await new Promise(resolve => setTimeout(resolve, 100))
-    }
-  }
-
-
   const handleAssetTypeSelect = (type) => {
     setSelectedAssetType(type)
     const assetConfig = ASSET_TYPES[type]
@@ -354,23 +343,6 @@ function App() {
       })
       setResizedImages({})
       setShowResizeView(false) // Go back to main view, resize button will be enabled
-    }
-  }
-
-  const getCanvasCoordinates = (e, canvas) => {
-    if (!canvas) return null
-    const rect = canvas.getBoundingClientRect()
-    const actualWidth = canvas.width
-    const actualHeight = canvas.height
-    const displayWidth = rect.width
-    const displayHeight = rect.height
-    
-    const scaleX = actualWidth / displayWidth
-    const scaleY = actualHeight / displayHeight
-    
-    return {
-      x: (e.clientX - rect.left) * scaleX,
-      y: (e.clientY - rect.top) * scaleY
     }
   }
 
