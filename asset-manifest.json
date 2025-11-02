@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/crochrome/static/css/main.68f22f1d.css",
+    "main.js": "/crochrome/static/js/main.eb0e2bbf.js",
+    "index.html": "/crochrome/index.html",
+    "main.68f22f1d.css.map": "/crochrome/static/css/main.68f22f1d.css.map",
+    "main.eb0e2bbf.js.map": "/crochrome/static/js/main.eb0e2bbf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68f22f1d.css",
+    "static/js/main.eb0e2bbf.js"
+  ]
+}
