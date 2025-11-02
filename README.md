@@ -1,15 +1,19 @@
 # CroChrome
 
-A simple React app for cropping and resizing images to Chrome extension image requirement sizes, with basic editing features (arrows and text).
+A React app for resizing images to Chrome Web Store asset requirements. Quickly resize screenshots and promo tiles to the exact dimensions required for Chrome Web Store listings.
 
 ## Features
 
-- Upload and crop images
-- Resize to Chrome extension standard sizes (16x16, 19x19, 32x32, 38x38, 48x48, 128x128, 192x192)
-- Add arrows to images
-- Add text annotations with customizable color and size
-- Download processed images
-- Dark theme UI with Ant Design components
+- Upload multiple images (JPEG/PNG)
+- Resize to Chrome Web Store asset sizes:
+  - **Screenshots**: 1280x800, 640x400
+  - **Small Promo Tile**: 440x280
+  - **Marquee Promo Tile**: 1400x560
+- Batch resize multiple images at once
+- Preview original vs resized images side-by-side
+- Download individual or all resized images
+- Modern dark theme UI with Ant Design components
+- Drag and drop image upload support
 
 ## Installation
 
@@ -20,8 +24,10 @@ npm install
 ## Development
 
 ```bash
-npm run dev
+npm start
 ```
+
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
 
 ## Build
 
@@ -29,13 +35,33 @@ npm run dev
 npm run build
 ```
 
+Builds the app for production to the `build` folder.
+
+## Deployment
+
+The app is configured for GitHub Pages deployment:
+
+```bash
+npm run deploy
+```
+
+Live site: [https://maskmanlucifer.github.io/crochrome](https://maskmanlucifer.github.io/crochrome)
+
 ## Usage
 
-1. Click "Upload Image" to select an image file
-2. Crop the image using the crop tool (square crop for icons)
-3. Click "Apply Crop" to proceed
-4. Use "Arrow" button to draw arrows on the image
-5. Use "Text" button to add text annotations
-6. Select a Chrome extension size from the dropdown
-7. Click "Resize" to resize the image
-8. Click "Download" to save the final image
+1. Select an asset type (Screenshots, Small Promo Tile, or Marquee Promo Tile)
+2. Choose the desired dimensions
+3. Upload one or more images by clicking "Upload New" or dragging and dropping
+4. Click "Resize All Images" to process all uploaded images
+5. Preview the original vs resized images in the comparison view
+6. Download individual images or click "Download All" to save all resized images
+
+## Technologies
+
+- React 18
+- Ant Design 5
+- react-image-crop (for future crop functionality)
+
+## License
+
+MIT
